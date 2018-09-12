@@ -145,6 +145,7 @@ size_t count_dynsym(struct symtabs *symtabs);
 #define MAP_KERNEL (struct uftrace_mmap *)2
 
 struct uftrace_mmap * find_map(struct symtabs *symtabs, uint64_t addr);
+bool find_map_sample(struct symtab *stab, uint64_t *start, uint64_t *end);
 struct uftrace_mmap * find_map_by_name(struct symtabs *symtabs,
 				       const char *prefix);
 struct uftrace_mmap * find_symbol_map(struct symtabs *symtabs, char *name);
