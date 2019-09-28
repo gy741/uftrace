@@ -44,10 +44,11 @@ uftrace recv 명령은 `uftrace-record` 명령어로 데이터를 전송하기 �
     # 클라이언트 :
     $ uftrace record -H localhost -d example_data --port 1234 example
 
-Above command sends the trace data to a remote server that pointed by given
--H option (`localhost` in this case) after running the example program.  And
-as you see, you can choose save directory by using `-d` option (sending data
-will save to `example_data` in this case).
+위의 명령어는 `example` 프로그램을 실행을 기록한 다음, -H 옵션을 사용하여 
+추적 데이터를 수신할 서버의 주소지를 설정하고 추적데이터를 전송한다. 그 다음 
+`-d` 옵션을 사용하여 서버에서 저장될 디렉터리 이름을 지정한다.
+최종적으로, 위의 명령어의 서버 주소지는 `localhost`이고 포트번호는 `1234`이며,
+저장될 디렉터리의 이름은 `example_data`이된다.
 
     # HOST : Check received data
     $ uftrace replay -d recv_data/example_data
@@ -62,8 +63,8 @@ will save to `example_data` in this case).
        4.845 us [17308] |   } /* a */
        5.076 us [17308] | } /* main */
 
-You can find saved trace data of example from `recv_data`'s subdirectory
-`example_data`.  Obviously, you should check at `HOST`.
+서버에서 지정한 `recv_data` 디렉터리의 하위 디렉터리에서 수신된 추적 데이터를 찾을 수 있다.
+추적데이터가 정상적으로 수신되었는지 서버에서 확인해야한다.
 
 
 추가정보
