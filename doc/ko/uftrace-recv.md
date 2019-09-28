@@ -21,27 +21,27 @@ uftrace recv 명령어는 네트워크를 통해 추적 데이터를 수신하�
 옵션
 =======
 -d *DATA*, \--data=*DATA*
-:   Specify directory name to save received data.
+:   수신된 추적 데이터를 저장할 디렉터리 이름을 지정한다.
 
 \--port=*PORT*
-:   Use given port instead of the default (8090).
+:   기본 포트(8090) 대신 사용할 포트 번호를 지정한다.
 
 \--run-cmd=*COMMAND*
-:   Run given (shell) command as soon as receive data.  For example, one can
-    run `uftrace replay` for received data.
+:   추적 데이터를 수신한 다음 즉시 실행할 명령어(쉘)를 설정한다. 예를들어,
+    수신된 추적 데이터에 대해 `uftrace replay` 명령어를 실행할 수 있다.
 
 
 예제
 =======
-The uftrace recv command should be run before sending data by record command.
+uftrace recv 명령은 `uftrace-record` 명령어로 데이터를 전송하기 전에 먼저 실행되어야 한다.
 
-    # HOST 
+    # 서버 
     $ uftrace recv -d recv_data --port 1234
 
-Above command starts a server with port by given (default `8090`) to receive
-data from remote client.
+위의 명령어는 지정된 포트 `1234`를 사용하여 서버를 시작하고, 원격 클라이언트에서 
+데이터를 수신한다.
 
-    # CLIENT :
+    # 클라이언트 :
     $ uftrace record -H localhost -d example_data --port 1234 example
 
 Above command sends the trace data to a remote server that pointed by given
