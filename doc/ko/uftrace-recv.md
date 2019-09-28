@@ -2,23 +2,23 @@
 % Namhyung Kim <namhyung@gmail.com>
 % Sep, 2018
 
-NAME
+이름
 ====
-uftrace-recv - Receive tracing data from socket and save it to files
+uftrace-recv - 네트워크를 통해 추적 데이터를 수신하고 파일로 저장한다.
 
 
-SYNOPSIS
+사용법
 ========
-uftrace recv [*options*]
+uftrace recv [*옵션*]
 
 
-DESCRIPTION
+설명
 ===========
-This command receives tracing data from the network and saves it to files.
-Data will be sent using `uftrace-record` with -H/\--host option.
+uftrace recv 명령어는 네트워크를 통해 추적 데이터를 수신하고 파일로 저장한다.
+추적 데이터는 `uftrace-record` 명령어와 -H/\--host 옵션을 사용하여 전송된다.
 
 
-OPTIONS
+옵션
 =======
 -d *DATA*, \--data=*DATA*
 :   Specify directory name to save received data.
@@ -31,7 +31,7 @@ OPTIONS
     run `uftrace replay` for received data.
 
 
-EXAMPLE
+예제
 =======
 The uftrace recv command should be run before sending data by record command.
 
@@ -66,6 +66,11 @@ You can find saved trace data of example from `recv_data`'s subdirectory
 `example_data`.  Obviously, you should check at `HOST`.
 
 
-SEE ALSO
+추가정보
 ========
 `uftrace`(1), `uftrace-record`(1)
+
+
+번역자
+========
+김관영 <gy741.kim@gmail.com>
