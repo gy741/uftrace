@@ -15,7 +15,7 @@ uftrace recv [*옵션*]
 설명
 ===========
 uftrace recv 명령어는 네트워크를 통해 추적 데이터를 수신하고 파일로 저장한다.
-추적 데이터는 `uftrace record` 명령어와 -H/\--host 옵션을 사용하여 전송된다.
+추적 데이터는 `uftrace-record` 명령어와 -H/\--host 옵션을 사용하여 전송된다.
 
 
 옵션
