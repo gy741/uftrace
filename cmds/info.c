@@ -219,7 +219,7 @@ static int fill_cmdline(void *arg)
 	ret = fread(buf, 1, sizeof(fha->buf), fp);
 	fclose(fp);
 
-	if (ret < 0)
+	if (ret != sizeof(fha->buf))
 		return ret;
 
 	/* cmdline separated by NUL character - convert to space */
